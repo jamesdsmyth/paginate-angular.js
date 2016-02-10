@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>paginate-angular.js</title>
+        <link rel="stylesheet" type="text/css" href="src/reset.css">
+        <link rel="stylesheet" type="text/css" href="src/main.css">
+    </head>
+    <body id="paginate" ng-app="pagination">
+        <main class="container" ng-controller="listController">
+            <h1>
+                Displaying {{ itemsLength }} items
+            </h1>
+            <div class="form-group">
+                <label for="filter-searches">
+                    Filter
+                </label>
+                <select ng-model="filter"
+                        ng-options="item.value as item.label for item in status"
+                        ng-change="resetPagination()"
+                        class="custom-select"
+                        id="filter-searches-select">
+                </select>
+            </div>
+            <div class="list-navigation">
+                <a href=""
+                    class="previous-page"
+                    ng-click="previousPage()"
+                    ng-class="disablePrevious == true ? 'disabled': ''">
+                    Previous
+                </a>
+                <span>
+                    {{ currentPage }} / {{ paginationLength }}
+                </span>
+                <a href=""
+                    class="next-page"
+                    ng-click="nextPage()"
+                    ng-class="disableNext == true ? 'disabled': ''">
+                    Next
+                </a>
+            </div>
+            <ul class="search-list">
+                <li class="{{item.status}}"
+                    ng-repeat="item in filteredResults = (items | filter: { status : filter } | orderBy:'-savedDate') | limitTo : listLimit : startList">
+                    <h2>
+                        {{item.title}}
+                    </h2>
+                    <span>
+                        {{item.status | statusFilter}}
+                    </span>
+                    <time>
+                        {{item.savedDate | date: 'h:mm:ss a, MMM d, y'}}
+                    </time>
+
+                </li>
+            </ul>
+            <div class="list-navigation lower">
+                <a href=""
+                    class="previous-page"
+                    ng-click="previousPage()"
+                    ng-class="disablePrevious == true ? 'disabled': ''">
+                    Previous
+                </a>
+                <span>
+                    {{ currentPage }} / {{ paginationLength }}
+                </span>
+                <a href=""
+                    class="next-page"
+                    ng-click="nextPage()"
+                    ng-class="disableNext == true ? 'disabled': ''">
+                    Next
+                </a>
+            </div>
+        </main>
+        <script src="src/angular-1.4.8.min.js"></script>
+        <script src="src/main.js"></script>
+    </body>
+</html>

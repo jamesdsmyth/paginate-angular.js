@@ -1,0 +1,105 @@
+/*
+ paginate-angular.js
+ James Smyth 2015 www.GITHUBADDRESSHERE
+*/
+#paginate .container {
+  width: 700px;
+  margin: 20px auto 0;
+}
+
+#paginate h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#paginate .form-group {
+  float: right;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+#paginate .form-group label {
+  margin-right: 10px;
+}
+
+#paginate .list-navigation {
+  display: block;
+  float: right;
+  clear: both;
+}
+
+#paginate .list-navigation.lower {
+  margin: 0 0 20px;
+}
+
+#paginate .list-navigation span {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 80px;
+}
+
+#paginate .list-navigation a {
+  display: block;
+}
+
+#paginate .list-navigation a.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#paginate .list-navigation a.previous-page {
+  float: left;
+}
+
+#paginate .list-navigation a.next-page {
+  float: right;
+}
+
+#paginate .search-list {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+}
+
+#paginate .search-list li {
+  float: left;
+  width: 100%;
+  display: block;
+  margin: 0 0 10px 0;
+  background: #ffffff;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(163, 163, 163, 0.5);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(163, 163, 163, 0.5);
+  box-shadow: 0px 1px 0px 0px rgba(163, 163, 163, 0.5);
+}
+
+#paginate .search-list li h2 {
+  float: left;
+  margin-bottom: 10px;
+}
+
+#paginate .search-list li span {
+  float: right;
+}
+
+#paginate .search-list li time {
+  float: left;
+  display: block;
+  clear: both;
+}
+
+#paginate .search-list li.new {
+  border-left: 5px solid #a3a3a3;
+}
+
+#paginate .search-list li.inProgress {
+  border-left: 5px solid #ffd500;
+}
+
+#paginate .search-list li.completed {
+  border-left: 5px solid #2b8637;
+}
