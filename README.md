@@ -1,8 +1,8 @@
-# AngularJS pagination
+# AngularJS pagination with filters
 
-Simple ng-repeat list pagination with next/previous links with a select dropdown on type of item within the list.
+Simple ng-repeat list pagination with next/previous links.
+The list is also filtered on list item type using Angular filers.
 
 **Coming soon**
-Clickable page numbers
 
-s
+Clickable page numbers
