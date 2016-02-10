@@ -1,7 +1,9 @@
 /*
  paginate-angular.js
- James Smyth 2015 www.GITHUBADDRESSHERE
+ James Smyth 2016
+ https://github.com/jamesdsmyth/paginate-angular.js
 */
+
 var paginatejs = angular.module('pagination', []);
 
 paginatejs.controller('listController', ['$scope', function($scope) {
